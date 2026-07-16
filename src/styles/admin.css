@@ -1,0 +1,146 @@
+/* ===================================================================
+   Admin Dashboard — additive styles only.
+   Reuses the same design tokens (--chalk-green, --marigold, etc.)
+   defined in styles/style.css so the admin area feels like part of
+   the same product, without touching a single rule of the approved
+   public site CSS.
+   =================================================================== */
+
+.admin-shell {
+  min-height: 100vh;
+  background: var(--paper-dim);
+}
+
+.admin-topbar {
+  background: var(--chalk-green-deep);
+  color: var(--paper);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+}
+.admin-topbar .crest {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--chalk-green-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  border: 2px solid var(--marigold);
+}
+
+.admin-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 28px 80px;
+}
+
+.admin-login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--chalk-green);
+  padding: 24px;
+}
+.admin-login-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 36px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.admin-login-card h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.admin-login-card .sub {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.admin-stat-card {
+  background: var(--white);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.admin-stat-card .n {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--chalk-green);
+}
+.admin-stat-card .l {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+@media (max-width: 700px) { .admin-stats { grid-template-columns: 1fr; } }
+
+.status-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.status-pill.new { background: #FCEBC9; color: #8A5A0D; }
+.status-pill.contacted { background: #DCEAE6; color: #1F3A34; }
+.status-pill.enrolled { background: #DCEFE0; color: #1F5C2E; }
+.status-pill.closed { background: #EDE8DA; color: #59564C; }
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--ink-soft);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.status-select {
+  padding: 6px 10px;
+  border: 1.5px solid var(--paper-line);
+  border-radius: var(--radius);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  background: var(--paper);
+}
+
+.admin-error {
+  background: #F6E4E1;
+  color: #7A2A20;
+  border: 1px solid #E3B7AE;
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
